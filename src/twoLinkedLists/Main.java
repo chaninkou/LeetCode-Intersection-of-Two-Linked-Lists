@@ -2,11 +2,30 @@ package twoLinkedLists;
 
 public class Main {
 	public static void main(String[] args) {
-		int[] headA = {4,1,8,4,5};
-		int[] headB = {5,0,1,8,4,5};
+		int[] inputA = {4,1,8,4,5};
+		
+		ListNode headA = insertNode(inputA);
+		
+		int[] inputB = {5,0,1,8,4,5};
+
+		ListNode headB = insertNode(inputB);
 		
 		FindIntersectionOfTwoLinkedListFunction solution = new FindIntersectionOfTwoLinkedListFunction();
 		
+		System.out.println(solution.getIntersectionNode(headA, headB));
 		
 	}
+	
+	private static ListNode insertNode(int[] input){
+		ListNode dummyRoot = new ListNode(0);
+		ListNode previous = dummyRoot;
+		
+		for(int item : input){
+			previous.next = new ListNode(item);
+			previous = previous.next;
+		}
+	
+		return dummyRoot.next;
+	}
+
 }
