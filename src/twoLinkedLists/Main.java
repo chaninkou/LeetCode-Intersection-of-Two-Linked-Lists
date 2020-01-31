@@ -10,9 +10,11 @@ public class Main {
 
 		ListNode headB = insertNode(inputB);
 		
+		headA.next = headB;
+		
 		FindIntersectionOfTwoLinkedListFunction solution = new FindIntersectionOfTwoLinkedListFunction();
 		
-		System.out.println(solution.getIntersectionNode(headA, headB));
+		System.out.println(solution.getIntersectionNode(headA, headB).val);
 		
 	}
 	
