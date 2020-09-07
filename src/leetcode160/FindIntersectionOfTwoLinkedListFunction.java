@@ -1,4 +1,4 @@
-package twoLinkedLists;
+package leetcode160;
 
 public class FindIntersectionOfTwoLinkedListFunction {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
